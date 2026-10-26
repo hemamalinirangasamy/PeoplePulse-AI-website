@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Log in — PeoplePulse AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">P</span><span>PeoplePulse <b>AI</b></span></a>
+    <nav><a href="index.html">← Back home</a></nav>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  </header>
+  <main class="auth-shell">
+    <aside class="auth-aside">
+      <div class="eyebrow">WELCOME BACK</div>
+      <h1>Your experience can help reveal what matters.</h1>
+      <p>Sign in to continue your community survey journey.</p>
+    </aside>
+    <section class="auth-main">
+      <div class="form-card login-card">
+        <div class="login-mode-switch" role="tablist" aria-label="Choose sign in type">
+          <button class="login-mode active" type="button" role="tab" id="userModeTab" aria-controls="loginForm" aria-selected="true">User Login</button>
+          <button class="login-mode" type="button" role="tab" id="adminModeTab" aria-controls="adminLoginForm" aria-selected="false">Admin Login</button>
+        </div>
+        <form id="loginForm" class="login-mode-panel" role="tabpanel" aria-labelledby="userModeTab">
+          <h2>Welcome back</h2>
+          <p class="muted">Sign in with the email and password you registered with.</p>
+          <div id="formMessage"></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+          <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Your password"></div>
+          <button class="button wide" type="submit">Continue <span>↗</span></button>
+          <div class="form-footer">New to PeoplePulse AI? <a href="register.html">Create an account</a></div>
+        </form>
+        <form id="adminLoginForm" class="login-mode-panel hidden" role="tabpanel" aria-labelledby="adminModeTab" hidden>
+          <h2>Admin sign in</h2>
+          <p class="muted">Use your authorized Supabase admin account.</p>
+          <div id="adminFormMessage"></div>
+          <div class="field"><label for="adminEmail">Admin email</label><input id="adminEmail" type="email" autocomplete="username" required placeholder="Enter admin email"></div>
+          <div class="field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Enter password"></div>
+          <button class="button wide" type="submit">Admin Login <span>↗</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="css/js/supabase-config.js"></script>
+  <script src="css/js/supabase-client.js"></script>
+  <script src="css/js/auth.js"></script>
+  <script src="css/js/admin.js"></script>
+  <script src="css/js/login-modes.js"></script>
+  <script src="css/js/i18n.js"></script>
+</body>
+</html>
